@@ -10,12 +10,13 @@ The dataset contains identifiers as well as measurements, each will be described
 * actid - The ID of the activity performed when the corresponding measurements were taken
 * acttype - The type of activity performed when the corresponding measurements were taken, corresponds to the actid:
 
-** Value 1: WALKING
-** Value 2: WALKING_UPSTAIRS 
-** Value 3: WALKING_DOWNSTAIRS
-** Value 4: SITTING
-** Value 5: STANDING
-** Value 6: LAYING 
+
+* Value 1: WALKING
+* Value 2: WALKING_UPSTAIRS 
+* Value 3: WALKING_DOWNSTAIRS
+* Value 4: SITTING
+* Value 5: STANDING
+* Value 6: LAYING 
 
 ##Measurements
 

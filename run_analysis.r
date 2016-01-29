@@ -68,4 +68,4 @@
     tidydata = finaldata2[nostdev==FALSE];
    
   # Export the tidyData set 
-    write.table(tidydata, './tidyData.txt',row.names=TRUE,sep='\t');
+    write.table(tidydata, './tidyData.txt',row.name=FALSE,sep='\t');
