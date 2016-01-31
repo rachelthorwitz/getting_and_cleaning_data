@@ -64,5 +64,5 @@ The units given are g’s for the accelerometer and rad/sec for the gyro and g/sec
 ###Notes
 
 The original dataset that combined the test and training datasets contained 563 variables.  
-Through the steps laid out in this project, first only those measures containing the means and standard deviations were retained.  
-When creating the tidydata.txt file, the measures with standard deviations were also removed, resulting in the final dataset with 12 variables.
+Through the steps laid out in this project, only those measures containing the means and standard deviations were retained.  
+The resulting tidy dataset contains 69 variables; 66 measurements and 3 identifiers.
