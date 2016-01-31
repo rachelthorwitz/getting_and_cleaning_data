@@ -8,7 +8,7 @@ The dataset contains identifiers as well as measurements, each will be described
 
 * subid - The ID of the test subject
 * actid - The ID of the activity performed when the corresponding measurements were taken
-* acttype - The type of activity performed when the corresponding measurements were taken, corresponds to the actid:
+* acttype - The label of activity performed when the corresponding measurements were taken, corresponds to the actid:
 
 
 * Value 1: WALKING
@@ -20,15 +20,46 @@ The dataset contains identifiers as well as measurements, each will be described
 
 ##Measurements
 
-* timeBodyAccelerometermagnitude-mean
-* timeGravityAccelerometermagnitude-mean     
-* timeBodyAccelerometerJerkmagnitude-mean      
-* timeBodygyroscopemagnitude-mean             
-* timeBodygyroscopeJerkmagnitude-mean        
-* frequencyBodyAccelerometermagnitude-mean    
-* frequencybodyAccelerometerJerkmagnitude-mean
-* frequencybodygyroscopemagnitude-mean       
-* frequencybodygyroscopeJerkmagnitude-mean
+The units given are g’s for the accelerometer and rad/sec for the gyro and g/sec and rad/sec/sec for the corresponding jerks.
+‘-XYZ’ is used to denote the directions of the signals
+
+ * actid                                                     
+ * subid                                                     
+ * timeBodyAccelerometer-mean-XYZ                                                           
+ * timeBodyAccelerometer-standard deviation-XYZ                               
+ * timeGravityAccelerometer-mean-XYZ                                                     
+ * timeGravityAccelerometer-standard deviation-XYZ                          
+ * timeBodyAccelerometerJerk-mean-XYZ                                                    
+ * timeBodyAccelerometerJerk-standard deviation-XYZ                     
+ * timeBodygyroscope-mean-XYZ                                                                   
+ * timeBodygyroscope-standard deviation-XYZ                                       
+ * timeBodygyroscopeJerk-mean-XYZ                                                           
+ * timeBodygyroscopeJerk-standard deviation-XYZ                              
+ * timeBodyAccelerometermagnitude-mean                       
+ * timeBodyAccelerometermagnitude-standard deviation         
+ * timeGravityAccelerometermagnitude-mean                    
+ * timeGravityAccelerometermagnitude-standard deviation      
+ * timeBodyAccelerometerJerkmagnitude-mean                   
+ * timeBodyAccelerometerJerkmagnitude-standard deviation     
+ * timeBodygyroscopemagnitude-mean                           
+ * timeBodygyroscopemagnitude-standard deviation             
+ * timeBodygyroscopeJerkmagnitude-mean                       
+ * timeBodygyroscopeJerkmagnitude-standard deviation        
+ * frequencyBodyAccelerometer-mean-XYZ                                           
+ * frequencyBodyAccelerometer-standard deviation-XYZ   
+ * frequencyBodyAccelerometerJerk-mean-XYZ                              
+ * frequencyBodyAccelerometerJerk-standard deviation-XYZ  
+ * frequencyBodygyroscope-mean-XYZ                                                
+ * frequencyBodygyroscope-standard deviation-XYZ   
+ * frequencyBodyAccelerometermagnitude-mean                  
+ * frequencyBodyAccelerometermagnitude-standard deviation    
+ * frequencybodyAccelerometerJerkmagnitude-mean              
+ * frequencybodyAccelerometerJerkmagnitude-standard deviation
+ * frequencybodygyroscopemagnitude-mean                      
+ * frequencybodygyroscopemagnitude-standard deviation        
+ * frequencybodygyroscopeJerkmagnitude-mean                 
+ * frequencybodygyroscopeJerkmagnitude-standard deviation   
+ * acttype
 
 ###Notes
 

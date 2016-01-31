@@ -40,8 +40,12 @@
     
 #2. Extract mean and standard deviation measurements
     names = colnames(finaldata1);
-    desireddata = (grepl("act..",names) | grepl("sub..",names) | grepl("-mean..",names) & !grepl("-meanFreq..",names) & !grepl("mean..-",names) | grepl("-std..",names) & !grepl("-std()..-",names));
-    finaldata = finaldata1[desireddata==TRUE];
+    desireddata = (grepl("std",names) | grepl("actid", names) | grepl("subid",names) | grepl("mean",names));
+    datasub = finaldata1[desireddata==TRUE];
+    #remove meanfreq
+    namesx = colnames(datasub);
+    desired2 = (grepl("meanFreq",namesx));
+    finaldata = datasub[desired2==FALSE];
     
 #3. Use descriptive activity names to name the activities in the data set
     finaldata2 = merge(finaldata,activityType,by='actid',all.x=TRUE);
@@ -61,11 +65,5 @@
     head(str(finaldata2),6)
     
 #5. Create a second, independent tidy data set with the average of each variable for each activity and each subject 
-  
-  # Subset to remove standard deviation columns
-    names2 = colnames(finaldata2);
-    nostdev = (grepl("standard",names2))
-    tidydata = finaldata2[nostdev==FALSE];
-   
-  # Export the tidyData set 
-    write.table(tidydata, './tidyData.txt',row.name=FALSE,sep='\t');
+
+    write.table(finaldata2, './tidyData.txt',row.name=FALSE,sep='\t');
