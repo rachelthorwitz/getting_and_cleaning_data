@@ -49,7 +49,8 @@
     
 #3. Use descriptive activity names to name the activities in the data set
     finaldata2 = merge(finaldata,activityType,by='actid',all.x=TRUE);
-    colNames  = colnames(finaldata2); 
+    finaldata2$actid <- NULL
+    colNames  = colnames(finaldata2);
     
 #4. Appropriately label the data set with descriptive variable names
     names(finaldata2) = gsub("std()", "standard deviation", names(finaldata2))
@@ -65,5 +66,10 @@
     head(str(finaldata2),6)
     
 #5. Create a second, independent tidy data set with the average of each variable for each activity and each subject 
-
-    write.table(finaldata2, './tidyData.txt',row.name=FALSE,sep='\t');
+    
+    ## Create summary data frame of mean of each variable grouped by subject and activity
+    all_means <- aggregate(. ~ subid + acttype, finaldata2, mean)
+    all_means2 <- all_means[order(all_means$subid,all_means$acttype),]
+    
+    ## Create "tidydata.txt" file with contents of all_means summary data frame
+    write.table(all_means2, './tidyData.txt',row.name=FALSE);

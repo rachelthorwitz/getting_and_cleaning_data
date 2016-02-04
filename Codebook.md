@@ -7,23 +7,21 @@ The dataset contains identifiers as well as measurements, each will be described
 ##Identifiers
 
 * subid - The ID of the test subject
-* actid - The ID of the activity performed when the corresponding measurements were taken
 * acttype - The label of activity performed when the corresponding measurements were taken, corresponds to the actid:
 
-
-* Value 1: WALKING
-* Value 2: WALKING_UPSTAIRS 
-* Value 3: WALKING_DOWNSTAIRS
-* Value 4: SITTING
-* Value 5: STANDING
-* Value 6: LAYING 
+* WALKING
+* WALKING_UPSTAIRS 
+* WALKING_DOWNSTAIRS
+* SITTING
+* STANDING
+* LAYING 
 
 ##Measurements
 
-The units given are g’s for the accelerometer and rad/sec for the gyro and g/sec and rad/sec/sec for the corresponding jerks.
-‘-XYZ’ is used to denote the directions of the signals
+The units given are g’s for the accelerometer and rad/sec for the gyroscopt and g/sec and rad/sec/sec for the corresponding jerks.
+‘-XYZ’ is used to denote the directions of the signals. The set of variables that were estimated from these signals are the mean and standard deviation.
 
- * actid                                                     
+ * acttype                                                     
  * subid                                                     
  * timeBodyAccelerometer-mean-XYZ                                                           
  * timeBodyAccelerometer-standard deviation-XYZ                               
@@ -59,10 +57,14 @@ The units given are g’s for the accelerometer and rad/sec for the gyro and g/sec
  * frequencybodygyroscopemagnitude-standard deviation        
  * frequencybodygyroscopeJerkmagnitude-mean                 
  * frequencybodygyroscopeJerkmagnitude-standard deviation   
- * acttype
+
+##Transformations
+
+The data were originally divided into both train and test data. These data were combined into one set of data. A mean statistic for each measurement variable was calculated by subject then activity. Variable names were cleaned up relative to the original data to make the names more descriptive.
+
 
 ###Notes
 
 The original dataset that combined the test and training datasets contained 563 variables.  
 Through the steps laid out in this project, only those measures containing the means and standard deviations were retained.  
-The resulting tidy dataset contains 69 variables; 66 measurements and 3 identifiers.
+The resulting tidy dataset contains 68 variables and 180 observations.
